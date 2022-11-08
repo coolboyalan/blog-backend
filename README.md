@@ -1,5 +1,3 @@
-# THIS IS NOT THE FINAL BRANCH, PLEASE DO TESTING ON FINAL BRANCH "project/blog"
-
 # Project Details
 
     # Name
