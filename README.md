@@ -32,8 +32,6 @@
 - Filter blogs list by applying filters. Query param can have any combination of below filters.
   - By author Id
   - By category
-  - List of blogs that have a specific tag
-  - List of blogs that have a specific subcategory
 example of a query url: blogs?filtername=filtervalue&f2=fv2
 
 ### PUT /blogs/:blogId
