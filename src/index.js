@@ -1,21 +1,11 @@
 const express = require("express");
-const mongoose = require("mongoose");
+const connectDB = require("./config/db");
 const route = require("./routes/route.js");
-const bodyParser = require("body-parser");
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
-mongoose
-  .connect(
-    "mongodb+srv://coolboyalan:RtSX23qZ9j75BEad@cluster0.yzrqd.mongodb.net/blog-backend",
-    {
-      useNewUrlParser: true,
-    }
-  )
-  .then(() => console.log("Connected"))
-  .catch((err) => console.log(err));
+connectDB();
 
 app.use("/", route);
 app.listen(process.env.PORT || 3000, function () {
